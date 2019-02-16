@@ -1,5 +1,5 @@
 
-<legend><b>Infomation of the student with Andrew ID:</b><legend> <%= @student[0][0] %> 
+<legend class = "text-white"><b>Infomation of the student with Andrew ID:</b><legend> <%= @student[0][0] %> 
     
   
           <% @student.each do |id, firstName, lastName, major, email, studentStatus|%>
@@ -7,36 +7,36 @@
   <thead>
     <tr>
       <th scope="col"> </th>
-      <th scope="col">Details</th>
+      <th scope="col" class = "text-white">Details</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Andrew ID</th>
-      <td><%= id %></td>
+      <th scope="row" class = "text-white">Andrew ID</th>
+      <td class = "text-white"><%= id %></td>
     </tr>
     <tr>
-      <th scope="row">First Name</th>
-      <td><%= firstName%></td>
+      <th scope="row" class = "text-white">First Name</th>
+      <td class = "text-white"><%= firstName%></td>
     </tr>
     <tr>
-      <th scope="row">Last Name</th>
-      <td><%= lastName%></td>
+      <th scope="row" class = "text-white">Last Name</th>
+      <td class = "text-white"><%= lastName%></td>
     </tr>
     
         <tr>
-      <th scope="row">Major</th>
-      <td>Larry</td>
+      <th scope="row" class = "text-white">Major</th>
+      <td class = "text-white"><%= major%></td>
     </tr>
     
         <tr>
-      <th scope="row">Email</th>
-      <td><%= major%></td>
+      <th scope="row" class = "text-white">Email</th>
+      <td class = "text-white"><%= email%></td>
     </tr>
     
         <tr>
-      <th scope="row">Status</th>
-      <td><%= studentStatus %></td>
+      <th scope="row" class = "text-white">Status</th>
+      <td class = "text-white"><%= studentStatus %></td>
     </tr>
   <% end %>
   </tbody>
