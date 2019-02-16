@@ -6,21 +6,21 @@
     <table class="table table-sm">
   <thead>
     <tr>
-       <th scope="col"><p class="text-white">Andrew ID</p></th>
-      <th scope="col"><p class="text-white">First Name</p></th>
-      <th scope="col"><p class="text-white">Last Name</p></th>
-      <th scope="col"><p class="text-white">Major</p></th>
-      <th scope="col"><p class="text-white">E-mail</p></th>
-      <th align="center" colspan="2" >Options</th>
+      <th scope="col" class="text-white">Andrew ID</th>
+      <th scope="col" class="text-white">First Name</th>
+      <th scope="col" class="text-white">Last Name</th>
+      <th scope="col" class="text-white">Major</th>
+      <th scope="col" class="text-white">E-mail</th>
+      <th align="center" colspan="2" class="text-white">Options</th>
     </tr>
   </thead>
   <tbody>
    <% @enrolled_students.each do |id, firstName, lastName, major, email| %>
         <tr><td scope="row"><a class="text-light" href="/student/<%= id %>"><%= id %></a> </td>
-      <td><p class="text-white"><%= firstName %></p></td>
-      <td><p class="text-white"><%= lastName %></p></td>
-      <td><p class="text-white"><%= major %></p></td>
-      <td><p class="text-white"><%= email %></p></td>
+      <td class="text-white"><%= firstName %></td>
+      <td class="text-white"><%= lastName %></td>
+      <td class="text-white"><%= major %></td>
+      <td class="text-white"><%= email %></td>
       <td><a href="/student/<%= id %>/edit" class="btn btn-info">Edit</a> </td>
       <td><a href ="/student/<%= id %>/delete" class='btn btn-danger'>Delete</a></td></tr>
     <% end %>  </tbody>
