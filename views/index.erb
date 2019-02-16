@@ -1,24 +1,23 @@
 
-
-                <a href ="/student/new">Create new Sudent Record</a>
+    			<a href ="/student/new">Create new Sudent Record</a>
 			    &nbsp;
 			    <a href ="/student/graduated">Show Graduated Students List</a>
 			    &nbsp;
 			    <a href ="/student/enrolled">Show Enrolled Students List</a>
 			    &nbsp;
-			    
+			     <br />
     <legend>All students:</legend> <br />
     
-    <table border = "1">
+    <table class="table table-sm">
   <thead>
     <tr>
-      <th>Andrew ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Major</th>
-      <th>E-mail</th>
-      <th>Status</th>
-      <th colspan="2" >Options</th>
+      <th scope="col">Andrew ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Major</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Status</th>
+      <th align="center" colspan="2" >Options</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +29,7 @@
       <td><%= email %></td>
       <td><%= studentStatus %></td>
       <td><a href="/student/<%= id %>/edit" class="btn btn-info">Edit</a> </td>
-      <td><a href ="/student/<%= id %>/delete" class='btn btn-danger'>Delete</a></td></tr>
+      <td><a href ="/student/<%= id %>/delete" Onclick="return ConfirmDelete();" class='btn btn-danger'>Delete</a></td></tr>
     <% end %>  </tbody>
 </table>
 
