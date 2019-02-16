@@ -24,19 +24,33 @@
   </div>
   
    <label class="col-md-4 control-label" for="major">Major:</label>  
-  <div class="col-md-4">
-  <input id="major" name="major" type="text" value="<%= @student[0][3] %>" class="form-control input-md" required>
-  </div>
+  
+  
+     <div class="col-md-4">
+<select class='form-control' id='major' name='major'>
+  <option value='Biologoical Sciences' <%= if @student[0][3]=='Biologoical Sciences' then 'selected' else '' end  %> >Biologoical Sciences</option>
+  <option value='Business Administration' <%= if @student[0][3]=='Business Administration' then 'selected' else '' end  %> >Business Administration</option>
+  <option value='Computer Sciences' <%= if @student[0][3]=='Computer Sciences' then 'selected' else '' end  %> >Computer Sciences</option>
+<option value='Information Systems' <%= if @student[0][3]=='Information Systems' then 'selected' else '' end  %> >Information Systems</option>
+
+</select>
+   
+  
+</div>
   
    <label class="col-md-4 control-label" for="email">Email:</label>  
   <div class="col-md-4">
   <input id="email" name="email" type="text" value="<%= @student[0][4] %>" class="form-control input-md" required>
   </div>
   
-   <label class="col-md-4 control-label" for="studentStatus">Status (Enrolled/Graduated):</label>  
-  <div class="col-md-4">
-  <input id="studentStatus" name="studentStatus" type="text" value="<%= @student[0][5] %>" class="form-control input-md" required>
-  </div>
+   <label class="col-md-4 control-label" for="studentStatus">Status (Enrolled/Graduated):</label>
+   
+   <div class="col-md-4">
+<select class='form-control' id='studentStatus' name='studentStatus'>
+  <option value='Graduated' <%= if @student[0][5]=='Graduated' then 'selected' else '' end  %> >Graduated</option>
+  <option value='Enrolled' <%= if @student[0][5]=='Enrolled' then 'selected' else '' end  %> >Enrolled</option>
+</select>
+   
   
 </div>
 
