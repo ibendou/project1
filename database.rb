@@ -20,7 +20,7 @@ class DBHandler
    def all
       begin
         db = SQLite3::Database.open "student.db"
-        dbstatement = "SELECT * FROM student;"
+        dbstatement = "SELECT * FROM student order by id;"
         db.execute dbstatement
       rescue SQLite3::Exception => e
         puts "Exception Occured"
@@ -29,7 +29,33 @@ class DBHandler
         db.close if db
       end   
    end
-
+   
+   def graduated
+      begin
+        db = SQLite3::Database.open "student.db"
+        dbstatement = "SELECT * FROM student WHERE studentStatus = 'Graduated' order by id;"
+        db.execute dbstatement
+      rescue SQLite3::Exception => e
+        puts "Exception Occured"
+        puts e
+      ensure
+        db.close if db
+      end   
+   end
+   
+   def enrolled
+      begin
+        db = SQLite3::Database.open "student.db"
+        dbstatement = "SELECT * FROM student WHERE studentStatus = 'Enrolled' order by id;"
+        db.execute dbstatement
+      rescue SQLite3::Exception => e
+        puts "Exception Occured"
+        puts e
+      ensure
+        db.close if db
+      end   
+   end   
+   
    def create(id, firstName, lastName, major, email, studentStatus)
       begin
         db = SQLite3::Database.open "student.db"
