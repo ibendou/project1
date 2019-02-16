@@ -5,6 +5,30 @@ get '/' do
     redirect to '/student'
 end
 
+get '/student' do
+    db = DBHandler.new
+    @student = db.all
+   erb :application do
+      erb :index 
+   end
+end
+
+get '/student/graduated' do
+    db = DBHandler.new
+    @graduated_students = db.graduated
+   erb :application do
+      erb :graduated
+   end
+end
+
+get '/student/enrolled' do
+    db = DBHandler.new
+    @enrolled_students = db.enrolled
+   erb :application do
+      erb :enrolled
+   end
+end
+
 get '/student/new' do
    erb :application do
        erb :new
