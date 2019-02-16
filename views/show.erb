@@ -1,0 +1,45 @@
+
+<legend><b>Infomation of the student with Andrew ID:</b><legend> <%= @student[0][0] %> 
+    
+  
+          <% @student.each do |id, firstName, lastName, major, email, studentStatus|%>
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col"> </th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Andrew ID</th>
+      <td><%= id %></td>
+    </tr>
+    <tr>
+      <th scope="row">First Name</th>
+      <td><%= firstName%></td>
+    </tr>
+    <tr>
+      <th scope="row">Last Name</th>
+      <td><%= lastName%></td>
+    </tr>
+    
+        <tr>
+      <th scope="row">Major</th>
+      <td>Larry</td>
+    </tr>
+    
+        <tr>
+      <th scope="row">Email</th>
+      <td><%= major%></td>
+    </tr>
+    
+        <tr>
+      <th scope="row">Status</th>
+      <td><%= studentStatus %></td>
+    </tr>
+  <% end %>
+  </tbody>
+  
+</table>
+<a class="btn btn-light" href="/student"  role="button"><< Go back to Main Page</a>
